@@ -14,7 +14,6 @@ ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh_client.connect(host,username="pi",password="rourkela")
 
 stdin,stdout,stderr=ssh_client.exec_command("sudo python ~/pycharm_project_844/pihat-test1.py")
-#stdin.write("rourkela")
 [temp,pressure,humidity,date] = stdout.readlines()
 
 print(temp)
